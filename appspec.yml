@@ -4,10 +4,6 @@ files:
   - source: /
     destination: /web/
 hooks:
-  AfterInstall:
-    - location: scripts/mkdir.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
     - location: scripts/start_flask.sh
       timeout: 300
