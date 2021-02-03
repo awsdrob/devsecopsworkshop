@@ -1,1 +1,1 @@
-curl -s http://127.0.0.1/shutdown
+curl -X POST http://127.0.0.1/shutdown
