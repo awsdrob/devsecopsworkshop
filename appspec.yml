@@ -4,11 +4,15 @@ files:
   - source: /
     destination: /web/
 hooks:
+  BeforeInstall:
+    - location: scripts/code_deploy_before_install.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
-    - location: scripts/start_flask.sh
+    - location: scripts/code_deploy_application_start.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_flask1.sh
+    - location: scripts/code_deploy_application_stop.sh
       timeout: 300
       runas: root
