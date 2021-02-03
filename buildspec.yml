@@ -3,12 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-        - python -m pip install Flask
+        - python3 -m pip install Flask
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
-      - python test_app.py
+      - python3 test_app.py
   post_build:
     commands:
       - echo Build completed on `date`
@@ -18,7 +18,6 @@ artifacts:
     - appspec.yml
     - templates/layout.html
     - templates/test.html
-    - scripts/mkdir.sh
-    - scripts/start_flask.sh
-    - scripts/stop_flask1.sh
-    - scripts/stop_flask.py
+    - scripts/code_deploy_application_start.sh
+    - scripts/code_deploy_application_stop.sh
+    - scripts/code_deploy_before_install.sh
